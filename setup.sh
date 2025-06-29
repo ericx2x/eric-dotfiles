@@ -10,6 +10,11 @@ install_powerlevel9k() {
     git clone https://github.com/Powerlevel9k/powerlevel9k.git $HOME/.powerlevel9k
 }
 
+# Function to install zsh-autosuggestions
+install_zsh_autosuggestions() {
+    git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+}
+
 # Function to set up Zsh as the default shell
 set_default_shell() {
     chsh -s $(which zsh)
@@ -44,6 +49,9 @@ install_oh_my_zsh
 
 # Install Powerlevel9k
 install_powerlevel9k
+
+# Install zsh-autosuggestions
+install_zsh_autosuggestions
 
 # Symlink .zshrc
 ln -sf $(pwd)/.zshrc $HOME/.zshrc
