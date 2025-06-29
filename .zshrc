@@ -3,6 +3,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Set the theme
 ZSH_THEME="powerlevel9k/powerlevel9k"
+DEFAULT_USER=`whoami`
 
 # Enable plugins
 plugins=(git zsh-autosuggestions)
