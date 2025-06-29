@@ -25,7 +25,7 @@ install_neovim() {
     if [[ "$OSTYPE" == "linux-gnu"* ]]; then
         # Linux
         if [ -x "$(command -v apt)" ]; then
-            sudo apt update && sudo apt install -y neovim
+            sudo add-apt-repository ppa:neovim-ppa/stable && sudo apt update && sudo apt install -y neovim
         elif [ -x "$(command -v dnf)" ]; then
             sudo dnf install -y neovim
         elif [ -x "$(command -v pacman)" ]; then
